@@ -1,30 +1,29 @@
 # Vuorovaikutteiset ohjelmat
-Tässä moduulissa opitaan kirjoittamaan yksinkertaisia, vuorovaikutteisia
-JavaScript-ohjelmia.
+
+Tässä moduulissa opitaan kirjoittamaan yksinkertaisia, vuorovaikutteisia JavaScript-ohjelmia.
 
 Vuorovaikutteisuudella tarkoitetaan mallia, jossa ohjelma
+
 1. lukee käyttäjältä syötteitä
 2. käsittelee syötteitä
 3. tulostaa tuloksen.
 
-Esimerkkinä tällaisesta on ohjelma, jossa käyttäjä antaa kaksi lukua ja ohjelma tulostaa
-lukujen summan. Käyttäjä antaa kaksi syötettä: ensimmäisen ja toisen luvun (vaihe 1), ohjelma laskee niiden
-summan (vaihe 2) ja ohjelma laskee tulostetun summan (vaihe 3).
+Esimerkkinä tällaisesta on ohjelma, jossa käyttäjä antaa kaksi lukua ja ohjelma tulostaa lukujen summan. Käyttäjä antaa kaksi syötettä: ensimmäisen ja toisen luvun (vaihe 1), ohjelma laskee niiden summan (vaihe 2) ja ohjelma laskee tulostetun summan (vaihe 3).
 
 ## Tulostaminen
 
 Aloitetaan yksinkertaisesta ohjelmasta, joka tuottaa käyttäjälle tulosteen.
 
 JavaScript tarjoaa kolme tulostusvaihtoehtoa:
+
 1. Konsolin lokituloste
 2. Ponnahtava varoitusikkuna
 3. Tulostus osaksi verkkosivua
 
-Tutustutaan tässä kumpaankin tulostustapaan. Jatkossa rajoitutaan konsolin lokitulosteen käyttöön, koska se
-on ohjelmoinnin opiskelun kannalta tarkoituksenmukaisempi: tulosteet saadaan kerralla näkyviin, eikä jokaisen
-varoitusikkunan sisältöä tarvitse erikseen kuitata.
+Tutustutaan tässä kumpaankin tulostustapaan. Jatkossa rajoitutaan konsolin lokitulosteen käyttöön, koska se on ohjelmoinnin opiskelun kannalta tarkoituksenmukaisempi: tulosteet saadaan kerralla näkyviin, eikä jokaisen varoitusikkunan sisältöä tarvitse erikseen kuitata.
 
 ### Konsolin lokituloste
+
 Konsolin lokituloste tuotetaan `console.log()`-metodilla.
 Lokituloste näkyy selaimen kehittäjätilassa yleensä Console-välilehdellä.
 
@@ -41,6 +40,7 @@ Hyvää huomenta kaikille.
 ### Ponnahtava varoitusikkuna
 
 Ponnahtava viesti-ikkuna tuotetaan [`alert`](BOM.md#alert-metodi)-funktiolla:
+
 ```javascript
         alert('Hei tätäkin kautta!');
 ```
@@ -52,8 +52,7 @@ Tästä eteenpäin esimerkeissä käytetään konsolitulostusvaihtoehtoa eli `co
 
 ### Tulostus osaksi verkkosivua
 
-JavaScript-ohjelma voi tulostaa  HTML-sisältöä verkkosivun osaksi `document.write`-metodin avulla.
-Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappale-elementin (`p`) sisällön ohjelmallisesti:
+JavaScript-ohjelma voi tulostaa  HTML-sisältöä verkkosivun osaksi `document.write`-metodin avulla. Esimerkiksi seuraava HTML-sivu sisältää JavaScript-osan, joka tulostaa kappale-elementin (`p`) sisällön ohjelmallisesti:
 
 ```html
 <!DOCTYPE html>
@@ -77,10 +76,7 @@ Avattava verkkosivu näyttää selaimessa tältä:
 
 ![tulostus sivun sisällöksi](img/sivunsisalloksi.png)
 
-Käytännössä ohjelmalliset tulostukset kerätään yleensä omiin funktioihinsa, joita kutsutaan jonkin tapahtuman - esimerkiksi 
-verkkosivulla olevan painikkeen painamisen - seurauksena. Tämä tulostustapa edellyttää funktion käsitteen ja dokumenttioliomallin
-hallintaa, joten sitä ei tässä yhteydessä käsitellä enempää.
-
+Käytännössä ohjelmalliset tulostukset kerätään yleensä omiin funktioihinsa, joita kutsutaan jonkin tapahtuman - esimerkiksi verkkosivulla olevan painikkeen painamisen - seurauksena. Tämä tulostustapa edellyttää funktion käsitteen ja dokumenttioliomallin hallintaa, joten sitä ei tässä yhteydessä käsitellä enempää.
 
 ### Merkkijonoliteraalit
 
@@ -90,6 +86,7 @@ Literaalilla tarkoitetaan arvoa, joka kirjoitetaan ohjelmakoodin sellaisenaan el
 Merkkijonoliteraalit kirjoitetaan aina lainausmerkkien sisään.
 
 Esimerkkejä merkkijonoliteraaleista:
+
 - `'Metropolia'`
 - `'A2'`
 - `'Tässä on pitkä palanen tekstiä.'`
@@ -99,52 +96,36 @@ Lainausmerkeistä JavaScript-tulkki tunnistaa, että kyseessä on merkkijonolite
 käsitellä sitä oikein, esimerkiksi pyydettäessä tulostaa sen sisällön sellaisenaan.
 
 ## Muuttujat
-Ohjelman tarvitsemia arvoja voidaan tallentaa muuttujiin.
-Muuttujaan tallennettavia arvoja voidaan lukea ohjelman aikana monta kertaa,
-ja kertaalleen asetettavia arvoja voidaan muuttaa.
 
-JavaScript-kielen muuttujat määritellään `let`- tai `var`-lauseella. Avainsanan
-valinta vaikuttaa muuttujan näkyvyyteen: näkyykö muuttuja koodilohkon vai funktion tasolla.
-Näitä ohjelmointikielen rakenteita käsitellään myöhemmin; tässä vaiheessa
-riittää opetella määrittelemään muuttujat `let`-avainsanan avulla.
+Ohjelman tarvitsemia arvoja voidaan tallentaa muuttujiin. Muuttujaan tallennettavia arvoja voidaan lukea ohjelman aikana monta kertaa, ja kertaalleen asetettavia arvoja voidaan muuttaa.
+
+JavaScript-kielen muuttujat määritellään `let`- tai `var`-lauseella. Avainsanan valinta vaikuttaa muuttujan näkyvyyteen: näkyykö muuttuja koodilohkon vai funktion tasolla. Näitä ohjelmointikielen rakenteita käsitellään myöhemmin; tässä vaiheessa riittää opetella määrittelemään muuttujat `let`-avainsanan avulla.
 
 Esimerkiksi muuttuja nimeltä `nimi` määritellään seuraavasti:
+
 ```javascript
         let nimi;
 ```
-Tässä vaiheessa muuttuja on määritelty eli ohjelman näkökulmasta
-olemassa: sille voidaan asettaa arvo, ja sen arvo voidaan lukea. 
-Arvon voi asettaa ja lukea kuinka monta kertaa tahansa; muuttujan arvon
-voi kuitenkin lukea vasta sen äjlkeen kun muuttuja on alustettu
-eli sille on asetettu arvo ensimmäisen kerran.
+
+Tässä vaiheessa muuttuja on määritelty eli ohjelman näkökulmasta olemassa: sille voidaan asettaa arvo, ja sen arvo voidaan lukea. Arvon voi asettaa ja lukea kuinka monta kertaa tahansa; muuttujan arvon voi kuitenkin lukea vasta sen äjlkeen kun muuttuja on alustettu eli sille on asetettu arvo ensimmäisen kerran.
 
 Edellä mainittu muuttuja voidaan alustaa seuraavasti:
+
 ```javascript
         nimi = 'Milla';
 ```
 
-
 Muuttuja voitaisiin myös määritellä ja alustaa samalla kertaa:
+
 ```javascript
         let nimi = 'Milla';
 ```
 
-Muuttujat ovat löyhästi tyypitettyjä, joten muuttujaa määriteltäessä
-ei ole tarpeen kertoa, minkälainen arvo muuttujaan on tarkoitus tallentaa - 
-onko kyseessä esimerkiksi kokonaisluku (kuten 17), liukuluku
- eli desimaaliluku (kuten 21.38) vai merkkijono
- (kuten "tietokone").
+Muuttujat ovat löyhästi tyypitettyjä, joten muuttujaa määriteltäessä ei ole tarpeen kertoa, minkälainen arvo muuttujaan on tarkoitus tallentaa - onko kyseessä esimerkiksi kokonaisluku (kuten 17), liukuluku eli desimaaliluku (kuten 21.38) vai merkkijono (kuten "tietokone").
 
-Muuttujien nimet ovat ohjelmoijan itse keksimiä tunnuksia. Nimet saavat sisältää kirjaimia, numeromerkkejä sekä alaviiva-
-ja dollarimerkkejä. Muuttujan nimi ei kuitenkaan saa alkaa numeromerkillä. Esimerkiksi `luku2` ja `kilogrammat` ovat kelvollisia
-muuttujan nimiä, mutta `7päivää` tai `yli-intendentti` eivät ole. Muuttujien nimissä saa käyttää skandinaavisia merkkejä
-eli ns. ääkkösiä, mutta niitä usein vältetään, koska merkkien tulostumisessa saattaa olla ongelmia silloin, kun
-tietokoneessa tai selaimessa on erilaiset maa-asetukset.
+Muuttujien nimet ovat ohjelmoijan itse keksimiä tunnuksia. Nimet saavat sisältää kirjaimia, numeromerkkejä sekä alaviiva- ja dollarimerkkejä. Muuttujan nimi ei kuitenkaan saa alkaa numeromerkillä. Esimerkiksi `luku2` ja `kilogrammat` ovat kelvollisia muuttujan nimiä, mutta `7päivää` tai `yli-intendentti` eivät ole. Muuttujien nimissä saa käyttää skandinaavisia merkkejä eli ns. ääkkösiä, mutta niitä usein vältetään, koska merkkien tulostumisessa saattaa olla ongelmia silloin, kun tietokoneessa tai selaimessa on erilaiset maa-asetukset.
 
-Esimerkiksi seuraava ohjelma määrittelee kaksi muuttujaa, joista ensimmäiseen
-tallennetaan merkkijono ja toiseen kokonaisluku. Tämän jälkeen ohjelma
-tulostaa muuttujien arvot, korvaa ne uusilla arvoilla ja tulostaa
-muuttuneet arvot:
+Esimerkiksi seuraava ohjelma määrittelee kaksi muuttujaa, joista ensimmäiseen tallennetaan merkkijono ja toiseen kokonaisluku. Tämän jälkeen ohjelma tulostaa muuttujien arvot, korvaa ne uusilla arvoilla ja tulostaa muuttuneet arvot:
 
 ```javascript
         let luku, nimi;
@@ -159,42 +140,48 @@ muuttuneet arvot:
 ```
 
 Ohjelman tuottama tuloste:
-```
+
+```txt
 153
 Anna
 -17
 Pekka
-```   
+```
+
 ### Muuttujien tyypit
 
 Edellä käsiteltiin kahden tyyppisiä muuttujia: kokonaislukuja ja merkkijonoja.
 JavaScript-kielessä on kuusi muuttujien alkeistyyppiä:
+
 - totuusarvo- eli boolean-tyyppi, jonka arvona voi olla `true` tai `false`
 - numeerinen tyyppi, joka voi sisältää kokonais- tai liukuluvun.
 - merkkijono
 - `null`, joka ilmaisee, että arvo on tyhjä.
-- `undefined`, joka ilmaisee, että määriteltyä muuttujaa
-ei vielä ole alustettu, jolloin sen tyyppi ei ole tiedossa.
+- `undefined`, joka ilmaisee, että määriteltyä muuttujaa ei vielä ole alustettu, jolloin sen tyyppi ei ole tiedossa.
 - symboli, jonka avulla voidaan luoda yksikäsitteisiä tunnisteita.
 
-Edellä lueteltujen alkeistyyppien lisäksi JavaScriptissä on olemassa oliotyyppi,
-joka voi sisältää rakenteeltaan mielivaltaisen monimutkaisia olioita.
+Edellä lueteltujen alkeistyyppien lisäksi JavaScriptissä on olemassa oliotyyppi, joka voi sisältää rakenteeltaan mielivaltaisen monimutkaisia olioita.
 
 Muuttujan tyyppi voidaan testata `typeOf`-operaatiolla:
+
 ```javascript
         let nimi = 'Ahmed';
         console.log(typeof nimi);
- ```
- Ohjelma tulostaa merkkijonon "string".
- 
+```
+
+Ohjelma tulostaa merkkijonon "string".
+
 ### Tyypin muuttaminen
 
 Numeerinen muuttuja voidaan muuttaa merkkijonoksi `toString`-metodilla:
+
 ```javascript
         let ika = 23;
         let ikaStr = ika.toString();
 ```
+
 Toiseen suuntaan muunnos voidaan tehdä parseInt- tai parseFloat-metodilla:
+
 ```javascript
         let ikaStr = '23';
         let rahaStr= '15.48';
@@ -202,29 +189,28 @@ Toiseen suuntaan muunnos voidaan tehdä parseInt- tai parseFloat-metodilla:
         let ika = parseInt(ikaStr);
         let raha = parseFloat(rahaStr);
 ```
+
 Muunnos voidaan tehdä myös unaarisella `+`-operaatiolla:
+
 ```javascript
         let raha = +rahaStr;
 ```
 
-        
-        
 ### Merkkijonojen yhdistäminen
-Merkkijonojen
-yhdistäminen eli katenaatio toteutetaan `+`-operaatiolla.
-Esimerkiksi seuraava lause rakentaa tulosteen kolmesta osamerkkijonosta:
+
+Merkkijonojen yhdistäminen eli katenaatio toteutetaan `+`-operaatiolla. Esimerkiksi seuraava lause rakentaa tulosteen kolmesta osamerkkijonosta:
+
 ```javascript
         console.log('Hyvää' + ' huomenta' + ' kaikille.');
 ```
 
 Tuloste:
-```
+
+```txt
 Hyvää huomenta kaikille.
 ```
 
-Vaihtoehtoisesti osajonot ja yhdistetty merkkijono voitaisiin 
-tallentaa muuttujiin 
-ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
+Vaihtoehtoisesti osajonot ja yhdistetty merkkijono voitaisiin tallentaa muuttujiin ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
 
 ```javascript
         let eka, toka, kolmas, kaikki;
@@ -233,12 +219,11 @@ ja tulostaa sen muuttujan arvo, joka sisältää yhdistetyn merkkijonon:
         kolmas = 'kaikille.';
         kaikki = eka + toka + kolmas;
         console.log(kaikki);
-```       
+```
 
 ### Olioliteraalit
 
-Olioliteraali määrittää joukon avain-arvopareina esitettäviä ominaisuuksia, joita voidaan käsitellä
-yhden muuttujan avulla.
+Olioliteraali määrittää joukon avain-arvopareina esitettäviä ominaisuuksia, joita voidaan käsitellä yhden muuttujan avulla.
 
 Esimerkiksi opiskelijalla on etunimi, sukunimi ja opintopistemäärä. Voimme luoda tällaisen
 opiskelijan olioliteraalin avulla seuraavasti:
@@ -250,7 +235,7 @@ let op1 = {
       opintopisteet :80
     };
 ```
-    
+
 Ominaisuuksiin voidaan viitata vaihtoehtoisilla notaatioilla.
 Esimerkiksi opiskelijan etunimi saadaan ilmauksella `op1.etunimi` tai `op1["etunimi"]`.
 Seuraavassa käytetään ensin mainittua tapaa:
@@ -261,13 +246,13 @@ console.log("Opiskelijan " + op1.etunimi +" tutkinnosta puuttuu " +
 ```
 
 Ominaisuuden avain voi olla myös tallennettuna muuttujaan. Seuraava koodi tulostaa opiskelijan sukunimen:
+
 ```javascript
 let valittuOminaisuus = "sukunimi";
 console.log(op1[valittuOminaisuus]);
-``` 
-Olioliteraalin määrittely voi sisältää myös funktioita. Alla oleva esimerkki luo olion, jonka
- jäljellä oleva tutkintoon vaadittava opintopistemäärä
-lasketaan funktion avulla. Lopuksi kyseinen opintopistemäärä tulostetaan.
+```
+
+Olioliteraalin määrittely voi sisältää myös funktioita. Alla oleva esimerkki luo olion, jonka jäljellä oleva tutkintoon vaadittava opintopistemäärä lasketaan funktion avulla. Lopuksi kyseinen opintopistemäärä tulostetaan.
 
 ```javascript
 let op2 = {
@@ -282,15 +267,13 @@ let op2 = {
 
 Funktioita käsitellään yksityiskohtaisesti myöhemmin.
 
-Edellä olioliteraaleja käytettiin tietorakenteena, jossa yhden muuttujanimen "taakse" voidaan tallentaa useita toisiinsa liittyviä arvoja.
-Vaikka oliopiirteitä ei tässä käsitelläkään, JavaScript on täysiverinen olio-ohjelmointikieli, jossa voidaan määrittää luokkia konstruktoreineen ja metodeineen. Olioita voidaan luoda `new`-lauseella, ja luokkia voidaan EC6-kieliversiosta alkaen määrittää toisten luokkien aliluokiksi hieman samaan tapaan kuin Java-ohjelmointikielessä.
+Edellä olioliteraaleja käytettiin tietorakenteena, jossa yhden muuttujanimen "taakse" voidaan tallentaa useita toisiinsa liittyviä arvoja. Vaikka oliopiirteitä ei tässä käsitelläkään, JavaScript on täysiverinen olio-ohjelmointikieli, jossa voidaan määrittää luokkia konstruktoreineen ja metodeineen. Olioita voidaan luoda `new`-lauseella, ja luokkia voidaan EC6-kieliversiosta alkaen määrittää toisten luokkien aliluokiksi hieman samaan tapaan kuin Java-ohjelmointikielessä.
 
 ## Syötteen luku
-Aiemmissa esimerkeissä ohjelmien tuottamat tulosteet olivat aina samanlaisia, eikä
-käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
 
-Sellaiset ohjelmat ovat harvinaisia. Yleensä halutaan, että käyttäjä voi antaa
-ohjelmalle syötteitä, jotka vaikuttavat ohjelman kulkuun.
+Aiemmissa esimerkeissä ohjelmien tuottamat tulosteet olivat aina samanlaisia, eikä käyttäjä voinut millään tavoin vaikuttaa niiden sisältöön.
+
+Sellaiset ohjelmat ovat harvinaisia. Yleensä halutaan, että käyttäjä voi antaa ohjelmalle syötteitä, jotka vaikuttavat ohjelman kulkuun.
 
 Syöte luetaan [`prompt()`](BOM.md#prompt-metodi)-funktiolla. Funktion argumenttina annetaan merkkijono, joka esitetään dialogi-ikkunassa käyttäjälle.
 
@@ -299,16 +282,14 @@ Seuraava lause kysyy käyttäjältä tämän nimen:
 ```javascript
      prompt('Anna nimesi.');
 ```
+
 Selainikkunaan ilmestyy dialogi-ikkuna:
 
 ![dialogi-ikkuna](img/dialogi_ikkuna.png)
 
-Tuossa muodossa kysymys on kuitenkin varsin hyödytön, sillä
-käyttäjän antamaa nimeä ei oteta talteen. Niinpä käyttäjältä luetut syötteet tallennetaan lähes poikkeuksetta muuttujiin,
-jotta luettuja syötteitä voidaan käyttää myöhemmin ohjelmassa.
+Tuossa muodossa kysymys on kuitenkin varsin hyödytön, sillä käyttäjän antamaa nimeä ei oteta talteen. Niinpä käyttäjältä luetut syötteet tallennetaan lähes poikkeuksetta muuttujiin, jotta luettuja syötteitä voidaan käyttää myöhemmin ohjelmassa.
 
-Seuraava esimerkkiohjelma kysyy käyttäjän nimen ja tervehtii tätä
-henkilökohtaisesti:
+Seuraava esimerkkiohjelma kysyy käyttäjän nimen ja tervehtii tätä henkilökohtaisesti:
 
 ```javascript
      let nimi;
@@ -318,13 +299,12 @@ henkilökohtaisesti:
 
 ## Matemaattiset operaatiot
 
-Numeerisiin muuttujiin voidaan kohdistaa matemaattisia operaatioita: niitä voidaan 
-esimerkiksi laskea yhteen ja vähentää sekä pyöristää haluttuun tarkkuuteen.
-Numeerisia arvoja voidaan myös tuottaa satunnaislukugeneraattorin avulla.
+Numeerisiin muuttujiin voidaan kohdistaa matemaattisia operaatioita: niitä voidaan esimerkiksi laskea yhteen ja vähentää sekä pyöristää haluttuun tarkkuuteen. Numeerisia arvoja voidaan myös tuottaa satunnaislukugeneraattorin avulla.
 
 ### Peruslaskutoimitukset
 
 JavaScript-kielen peruslaskutoimitukset ovat:
+
 - yhteenlasku (`+`)
 - vähennyslasku (`-`)
 - kertolasku (`*`)
@@ -337,6 +317,7 @@ JavaScript-kielen peruslaskutoimitukset ovat:
         luku = 1 + luku/2;   // arvo on nyt 11.5
         console.log(luku);
 ```
+
 Seuraavilla operaatioilla voidaan muuttaa muuttujan arvoa yhdellä:
 
 - lisäys yhdellä (`++`)
@@ -349,8 +330,8 @@ Seuraavilla operaatioilla voidaan muuttaa muuttujan arvoa yhdellä:
         console.log(luku);
 ```
 
-
 Arvoa voidaan myös muuttaa kerralla enemmän:
+
 - lisäys vakiolla (`+=`)
 - vähennys vakiolla (`-=`)
 - kertominen vakiolla (`*=`)
@@ -365,97 +346,57 @@ Arvoa voidaan myös muuttaa kerralla enemmän:
         console.log(luku);
 ```
 
-
 ### Matemaattiset funktiot
 
-Monet matemaattiset operaatiot - esimerkiksi kosinin laskeminen tai
-neliöjuuren otto - toteutetaan `Math`-olion avulla käytettävien
-matematiikkametodien avulla. Esimerkiksi seuraava ohjelma tulostaa 
-luvun 3 neliöjuuren (`Math.sqrt`) sekä satunnaisluvun (`Math.random`) nollan ja yhden väliltä:
+Monet matemaattiset operaatiot - esimerkiksi kosinin laskeminen tai neliöjuuren otto - toteutetaan `Math`-olion avulla käytettävien matematiikkametodien avulla. Esimerkiksi seuraava ohjelma tulostaa luvun 3 neliöjuuren (`Math.sqrt`) sekä satunnaisluvun (`Math.random`) nollan ja yhden väliltä:
 
 ```javascript
         console.log(Math.sqrt(3));
         console.log(Math.random());
 ```
 
-Math-olion tarjoamia metodeja ei tarvitse opetella ulkoa.
-Kun kirjoitat koodia kehittimellä (esimerkiksi WebStorm) ja syötät
-`Math`-sanan kirjoitettuasi pisteen, kehitin tarjoaa luettelon
-tarjolla olevista metodeista ja vakioista. Luettelosta näet myös, mitä 
-argumentteja kullekin metodeista on annettava; esimerkiksi
-neliöjuurimetodi `sqrt` vaatii argumentiksi juurrettavan, kun taas satunnaisluvun
-tuottava `random`-metodi ei tarvitse argumentteja,
+Math-olion tarjoamia metodeja ei tarvitse opetella ulkoa. Kun kirjoitat koodia kehittimellä (esimerkiksi WebStorm) ja syötät `Math`-sanan kirjoitettuasi pisteen, kehitin tarjoaa luettelon tarjolla olevista metodeista ja vakioista. Luettelosta näet myös, mitä  argumentteja kullekin metodeista on annettava; esimerkiksi neliöjuurimetodi `sqrt` vaatii argumentiksi juurrettavan, kun taas satunnaisluvun tuottava `random`-metodi ei tarvitse argumentteja,
 
-Voit tutustua tarjolla oleviin metodeihin myös virallisen JavaScript-määrityksen kautta:
-<http://www.ecma-international.org/ecma-262/6.0/> (luku 20.2.)
-tai voit käyttää jotakin netin lukuisista JavaScript-lähteistä ja opetusmateriaaleista.
+Voit tutustua tarjolla oleviin metodeihin myös virallisen JavaScript-määrityksen kautta: <http://www.ecma-international.org/ecma-262/6.0/> (luku 20.2.) tai voit käyttää jotakin netin lukuisista JavaScript-lähteistä ja opetusmateriaaleista.
 
 ## Muuttujien automaattinen määrittäminen
-JavaScript-ohjelmat suoritetaan oletusarvoisesti ns. löyhässä
-tilassa (sloppy mode), jossa muuttujien määrittäminen `var`-sanalla
-ei ole pakollista. Tällöin määritellään automaattisesti globaali
-(eli koko ohjelman tasolla näkyvä) muuttuja aina, kun ohjelmoija
-sijoittaa muuttujaan arvon ensimmäisen kerran.
+
+JavaScript-ohjelmat suoritetaan oletusarvoisesti ns. löyhässä tilassa (sloppy mode), jossa muuttujien määrittäminen `var`-sanalla ei ole pakollista. Tällöin määritellään automaattisesti globaali (eli koko ohjelman tasolla näkyvä) muuttuja aina, kun ohjelmoija sijoittaa muuttujaan arvon ensimmäisen kerran.
 
 Esimerkiksi seuraava ohjelma voitaisiin suorittaa näennäisen onnistuneesti:
+
 ```javascript
         let akselivali = 0;
         aksleivali = 2340;
         console.log('Akseliväli on: ' + akselivali);
 ```
 
-Ohjelma tulostaa kuitenkin akseliväliksi nollan; syynä siihen on
-ohjelmoijan tekemä lyöntivirhe muuttujanimessä.
-Ohjelma luo aluksi `let`-lausella määritellyn
-`akseliväli`-nimisen muuttujan. Toisella rivillä kuitenkin sijoitetaan
-arvo eri nimiseen, vahingossa väärin kirjoitettuun `aksleiväli`-nimiseen
-muuttujaan. Tällöin luodaan automaattisesti toinen muuttuja.
+Ohjelma tulostaa kuitenkin akseliväliksi nollan; syynä siihen on ohjelmoijan tekemä lyöntivirhe muuttujanimessä. Ohjelma luo aluksi `let`-lausella määritellyn `akseliväli`-nimisen muuttujan. Toisella rivillä kuitenkin sijoitetaan arvo eri nimiseen, vahingossa väärin kirjoitettuun `aksleiväli`-nimiseen muuttujaan. Tällöin luodaan automaattisesti toinen muuttuja.
 
-Lopulta ohjelmassa on kaksi eri muuttujaa, ja ohjelma tulostaa
-akseliväliksi nollan johtuen siitä, että oikea arvo `2340` oli
-sijoitettu väärään muuttujaan. Sen
-sijaan `let`-lauseella määritellyn, oikein kirjoitetun muuttujan arvo oli jäänyt nollaksi.
+Lopulta ohjelmassa on kaksi eri muuttujaa, ja ohjelma tulostaa akseliväliksi nollan johtuen siitä, että oikea arvo `2340` oli sijoitettu väärään muuttujaan. Sen sijaan `let`-lauseella määritellyn, oikein kirjoitetun muuttujan arvo oli jäänyt nollaksi.
 
-Kuvatun kaltaiset tilanteet luovat hankalasti löydettäviä semanttisia virheitä,
-joissa ohjelman suoritus ei kaadu virheilmoitukseen vaan ohjelma
-toimii sen sijaan väärin.
+Kuvatun kaltaiset tilanteet luovat hankalasti löydettäviä semanttisia virheitä, joissa ohjelman suoritus ei kaadu virheilmoitukseen vaan ohjelma toimii sen sijaan väärin.
 
-Niinpä määrittelemättömien globaalien muuttujien
- automaattinen luonti kannattaa estää. Tämän voi tehdä lisäämällä
- ohjelman alkuun `use strict` -lause, joka kirjoitetaan 
- alla olevaan tapaan heittomerkkeihin:
- 
+Niinpä määrittelemättömien globaalien muuttujien automaattinen luonti kannattaa estää. Tämän voi tehdä lisäämällä ohjelman alkuun `use strict` -lause, joka kirjoitetaan alla olevaan tapaan heittomerkkeihin:
+
  ```javascript
          'use strict';
  ```
 
-Tämän seurauksena ohjelma suoritetaan tiukassa tilassa (strict mode).
-Tiukassa tilassa tulostuu virheilmoitus aina, kun määrittelemättömään
-muuttujaan yritetään sijoittaa arvo. Globaalia muuttujaa ei enää
-luoda automaattisesti, vaan se vaatii `let`-lauseen kirjoittamisen. Määrityksen käyttö muuttaa käyttäjän
-vahingossa tekemät, mahdollisesti huomaamatta jäävät lyöntivirheet
-näkyviksi syntaksivirheiksi. Tämä helpottaa oikein toimivien
-ohjelmien kirjoittamista.
+Tämän seurauksena ohjelma suoritetaan tiukassa tilassa (strict mode). Tiukassa tilassa tulostuu virheilmoitus aina, kun määrittelemättömään muuttujaan yritetään sijoittaa arvo. Globaalia muuttujaa ei enää luoda automaattisesti, vaan se vaatii `let`-lauseen kirjoittamisen. Määrityksen käyttö muuttaa käyttäjän vahingossa tekemät, mahdollisesti huomaamatta jäävät lyöntivirheet näkyviksi syntaksivirheiksi. Tämä helpottaa oikein toimivien ohjelmien kirjoittamista.
 
 Edellä kuvatusta syystä `use strict` -määrityksen käyttö jokaisessa ohjelmassa kannattaa ottaa tavaksi.
 
 ## Nimetyt vakiot
 
-Aiemmissa esimerkeissä käytettiin muuttujia, jotka määriteltiin
-`let`-lauseella. Muuttujan arvoja voidaan nimensä mukaisesti
-muutella ohjelman suorituksen aikana.
+Aiemmissa esimerkeissä käytettiin muuttujia, jotka määriteltiin `let`-lauseella. Muuttujan arvoja voidaan nimensä mukaisesti muutella ohjelman suorituksen aikana.
 
-Toisinaan voi syntyä tilanne, jossa haluttaisiin luoda muuttuja jonkin
-monimutkaisen arvon säilyttämiseksi, mutta tuon muuttujan arvoa ei
-ole tarkoitus ohjelman suorituksen aikana muuttaa. Esimerkkinä
-tällaisesta arvosta on vaikkapa kahden energian yksikön, kalorien ja joulien,
-välinen muuntokerroin 4,1868.
+Toisinaan voi syntyä tilanne, jossa haluttaisiin luoda muuttuja jonkin monimutkaisen arvon säilyttämiseksi, mutta tuon muuttujan arvoa ei ole tarkoitus ohjelman suorituksen aikana muuttaa. Esimerkkinä tällaisesta arvosta on vaikkapa kahden energian yksikön, kalorien ja joulien, välinen muuntokerroin 4,1868.
 
-Tällaisen muuttumattoman arvon säilyttämiseksi voidaan käyttää nimettyä vakiota,
-joka määritetään `const`-sanalla. Nimetyn vakion arvo voidaan asettaa kerran,
-mutta sitä ei voi muuttaa.
+Tällaisen muuttumattoman arvon säilyttämiseksi voidaan käyttää nimettyä vakiota, joka määritetään `const`-sanalla. Nimetyn vakion arvo voidaan asettaa kerran, mutta sitä ei voi muuttaa.
 
 Seuraava ohjelma kysyy käyttäjältä kaksi kalorimäärää ja muuttaa ne jouleiksi:
+
 ```javascript
         const KERROIN = 4.1868;
         let k1, k2, j1, j2;
@@ -468,10 +409,7 @@ Seuraava ohjelma kysyy käyttäjältä kaksi kalorimäärää ja muuttaa ne joul
         console.log('Sait aamiaisella '+j1+' kJ ja päivällisellä '+j2+' kJ.');
 ```
 
-Nimetyn vakion `KERROIN` käyttö tiukassa tilassa (strict mode) varmistaa, että kummassakin
-kertolaskussa käytetään oikeaa arvoa. Jos muuntokertoimet kirjoitettaisiin ohjelmakoodiin
-kahteen kertaan, on mahdollista, että toisen kertoimen desimaalien kohdalla tulisi tehtyä näppäilyvirhe,
-joka aiheuttaisi lopputulokseen pienen mutta hankalasti havaittavan laskuvirheen.
+Nimetyn vakion `KERROIN` käyttö tiukassa tilassa (strict mode) varmistaa, että kummassakin kertolaskussa käytetään oikeaa arvoa. Jos muuntokertoimet kirjoitettaisiin ohjelmakoodiin kahteen kertaan, on mahdollista, että toisen kertoimen desimaalien kohdalla tulisi tehtyä näppäilyvirhe, joka aiheuttaisi lopputulokseen pienen mutta hankalasti havaittavan laskuvirheen.
 
 Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimin.
 
@@ -483,40 +421,35 @@ Nimetyt vakiot kirjoitetaan vakiintuneen käytännön mukaisesti suurin kirjaimi
 
     - Jos syötät nimeksesi Viivi, ohjelma tervehtii sinua sanoin 'Terve, Viivi!'
     - Jos syötät nimeksesi Ahmed, ohjelma tervehtii sinua sanoin 'Terve, Ahmed!'
-    
+
 3. Kirjoita ohjelma, joka kysyy ympyrän säteen ja tulostaa sen pinta-alan (2p).
 
-    - Selvitä, miten saat käyttöösi piin tarkan likiarvon ja sen miten lasketaan potenssilasku. Ks. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+    - Selvitä, miten saat käyttöösi piin tarkan likiarvon ja sen miten lasketaan potenssilasku. Ks. <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math>
 
 4. Kirjoita ohjelma, joka kysyy suorakulmion kannan ja korkeuden. Ohjelma tulostaa suorakulmion piirin ja pinta-alan. Suorakulmion piiri tarkoittaa sen neljän sivun yhteispituutta (2p).
-    
+
 5. Kirjoita ohjelma, joka kysyy kolme kokonaislukua. Ohjelma tulostaa lukujen summan, tulon ja keskiarvon (2p).
     - Ensimmäisellä yrityksellä summa ei todennäköisesti mene oikein. Voit muutta merkkijonon numeroksi esim. [unaarisella operaattorilla +](https://scotch.io/tutorials/javascript-unary-operators-simple-and-useful#toc-unary-plus-)
 
 6. Kirjoita ohjelma, joka kysyy käyttäjältä massan keskiaikaisten mittojen mukaan leivisköinä, nauloina ja luoteina. Ohjelma muuntaa syötteen täysiksi kilogrammoiksi ja grammoiksi sekä ilmoittaa tuloksen käyttäjälle (4p).
     - Yksi leiviskä on 20 naulaa, yksi naula on 32 luotia ja yksi luoti on 13,3 grammaa.
-
     - Esimerkki ohjelman tulosteesta, kun käyttäjä antaa syötteenä 3 leiviskää, 9 naulaa ja 13.5 luotia:
-    
-        ```
+
+        ```txt
         Massa nykymittojen mukaan:
         29 kilogrammaa ja 545.95 grammaa. 
         ```
+
     - apuja: [Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) ja [Number.prototype.toFixed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
-    
+
 7. Kirjoita ohjelma, joka kysyy käyttäjältä tilin saldon sekä vuotuisen korkoprosentin.
 Ohjelma ilmoittaa vuodessa kertyvän koron määrän sekä kasvaneen saldon, johon on lisätty vuosikorko.
 Kaikki rahasummat tulostetaan sentin tarkkuudella oikein pyöristettyinä (2p).
 
-8. Monopoli-pelissä pelaaja heittää kahta noppaa ja etenee silmälukujen summan verran.
-   Kirjoita ohjelma, joka arpoo kaksi nopan silmälukua. Ohjelma tulostaa viesti-ikkunassa arvotut silmäluvut sekä niiden alapuolella eri rivillä silmälukujen summan (3p).
-   
+8. Monopoli-pelissä pelaaja heittää kahta noppaa ja etenee silmälukujen summan verran. Kirjoita ohjelma, joka arpoo kaksi nopan silmälukua. Ohjelma tulostaa viesti-ikkunassa arvotut silmäluvut sekä niiden alapuolella eri rivillä silmälukujen summan (3p).
    - Käytä funktiota `Math.random()`.
-   
+
 9. Kirjoita ohjelma, joka arpoo ja tulostaa kaksi erilaista numerolukon koodia (3p):
 
     1. Kolmenumeroisen koodin, jonka kukin numeromerkki on väliltä 0..9.
     2. Nelinumeroisen koodin, jonka kukin numeromerkki on väliltä 1..6.
-
-
-
