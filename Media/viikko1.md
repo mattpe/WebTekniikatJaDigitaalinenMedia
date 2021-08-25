@@ -1,1 +1,0 @@
-**Kuvankäsittelyn perusteet**
