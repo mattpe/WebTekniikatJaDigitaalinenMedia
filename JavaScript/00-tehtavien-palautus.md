@@ -8,7 +8,21 @@ Tehtäviä voi ja kannattaa tehdä myös etukäteen, sillä niitä kaikkia ei eh
 
 ## Tehtävien tallentaminen kotihakemistoon
 
-Tee tehtävien palautusta varten alihakemisto _users.metropolia.fi_ -palvelimella olevaan public_html kotihakemistoosi ja siirrä koodisi sinne. Siirron voit tehdä monella tapaa, esim. Suoraan WebStorm kehitysympäristöstä, FTP-ohjelmalla (kuten WinSCP) tai Metropolian verkkolevyjen weppi-käyttöliittymällä (Web disk). Ohjeita näihin löytyy Oman työtilan dokumenteista.
+Tee tehtävien palautusta varten alihakemisto _users.metropolia.fi_ -palvelimella olevaan public_html kotihakemistoosi ja siirrä koodisi sinne. Siirron voit tehdä monella tapaa, esim. suoraan WebStorm tai VSCode -kehitysympäristöistä, erillisellä SCP-tiedostonsiirto-ohjelmalla (kuten WinSCP, Cyberduck, Filezilla, tms.) tai Metropolian verkkolevyjen weppi-käyttöliittymällä [Webdiskillä](https://webdisk.metropolia.fi/).
+
+- yhteyden muodostaminen:
+  - Protokolla: SFTP, portti 22
+  - osoite: shell.metropolia.fi
+- web-sivujen kansio:
+  - public_html ja sen alikansiot
+- osoite web sivuille:
+  - users.metropolia.fi/~tunnus/[kansio][/][tiedosto]
+- Tarvittaessa säädä oikeudet tiedostoille ja kansioille
+  - oikea hiiren nappi/properties (tai info)/permissions
+  - 755 (tai 0755)
+  - puttyllä/terminaalilla:
+    - (mäkillä: ssh tunnus@shell.metropolia.fi)
+    - chmod -R 755 public_html/kansion_nimi
 
 Lisätietoja kotisivuista [tietohallinnon ohjeesta](https://wiki.metropolia.fi/display/tietohallinto/Kotisivu-%2C+Shell-+ja+MySQL-palvelut).
 
