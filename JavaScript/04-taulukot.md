@@ -1,10 +1,9 @@
 # [Taulukot](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-Taulukko on tietorakenne, joka koostuu joukosta alkioita.
-Taulukon käytön ansiosta ei tarvitse keksiä suurta joukkoa muuttujanimiä, vaan
-kaikkiin taulukossa olevia arvoja - eli taulukon alkioita - voidaan
-käyttää yhden muuttujan kautta.
+
+Taulukko on tietorakenne, joka koostuu joukosta alkioita. Taulukon käytön ansiosta ei tarvitse keksiä suurta joukkoa muuttujanimiä, vaan kaikkiin taulukossa olevia arvoja - eli taulukon alkioita - voidaan käyttää yhden muuttujan kautta.
 
 Esimerkiksi voitaisiin luoda seuraavanlaiset taulukot:
+
 - seitsenalkioinen kokonaislukutaulukko, joka sisältää henkilön työtunnit viikon kunakin päivänä.
 - neljäalkioinen merkkijonotaulukko, joka sisältää neljän pelaajan nimet.
 - 500-alkioinen liukulukutaulukko, joka sisältää viisisataa arvottua satunnaislukua.
@@ -14,68 +13,64 @@ Esimerkiksi työtuntitaulukko voitaisiin visualisoida seuraavasti:
 
 Taulukon alkioihin viitataan taulukkomuuttujan nimellä ja indeksillä.
 
-Esimerkissä `tyotunnit` on taulukkomuuttujan nimi, ja luvut 0 ja 4 ovat indeksejä.
-Indeksit voivat vaihdella esimerkissä välillä 0..6.
+Esimerkissä `tyotunnit` on taulukkomuuttujan nimi, ja luvut 0 ja 4 ovat indeksejä. Indeksit voivat vaihdella esimerkissä välillä 0..6.
 
-Taulukon työtunnit viidenteen alkioon viitataan ilmauksella `tyotunnit[4]`. Numerointi alkaa
-nollasta, ja taulukon indeksi on aina yhtä pienempi kuin taulukon koko - eli alkioiden määrä taulukossa.
+Taulukon työtunnit viidenteen alkioon viitataan ilmauksella `tyotunnit[4]`. Numerointi alkaa nollasta, ja taulukon indeksi on aina yhtä pienempi kuin taulukon koko - eli alkioiden määrä taulukossa.
 
-JavaScript-ohjelmointikieli ei edellytä, että kaikki taulukon alkiot ovat saman tyyppisiä. Niinpä
-voitaisiin luoda esimerkiksi taulukko, jossa osa alkioista on kokonaislukuja ja
-osa merkkijonoja. Tämä on kuitenkin harvoin tarkoituksenmukaista.
+JavaScript-ohjelmointikieli ei edellytä, että kaikki taulukon alkiot ovat saman tyyppisiä. Niinpä voitaisiin luoda esimerkiksi taulukko, jossa osa alkioista on kokonaislukuja ja osa merkkijonoja. Tämä on kuitenkin harvoin tarkoituksenmukaista.
 
 ## Taulukkomuuttujan määritys ja taulukon luonti
 
 Taulukon käyttöönotto koostuu taulukkomuuttujan määrityksestä ja taulukon luonnista.
 
 Seuraava lause luo taulukkomuuttujan nimeltä luvut, jonka arvona on aluksi tyhjä taulukko.
+
 ```javascript
-        let luvut = [];
+let numbers = [];
 ```
 
 Lisätään taulukkoon sen jälkeen kolme alkiota:
+
 ```javascript
-        luvut[0] = 17;
-        luvut[1] = 2;
-        luvut[2] = 8;
+numbers[0] = 17;
+numbers[1] = 2;
+numbers[2] = 8;
 ```        
+
 Vaihtoehtoisesti taulukko voitaisiin luoda kirjoittamalla sen
 sisältö suoraan lauseeseen, jossa taulukkomuuttuja määritellään:
+
 ```javascript
-        luvut = [17,2,8];
+numbers = [17,2,8];
 ```    
 
-Huomaa, että taulukon kokoa ei tarvitse tietää taulukkoa luotaessa.
-Taulukkoon voidaan sen luonnin jälkeen lisätä haluttu määrä alkioita.
+Huomaa, että taulukon kokoa ei tarvitse tietää taulukkoa luotaessa. Taulukkoon voidaan sen luonnin jälkeen lisätä haluttu määrä alkioita.
 
-Taulukon koko määräytyy suurimman käytetyn indeksin mukaan. Koko on yhtä suurempi kuin suurin indeksi.
-Taulukon `luvut` koko saadaan tarvittaessa lausekkeesta `luvut.length`.
+Taulukon koko määräytyy suurimman käytetyn indeksin mukaan. Koko on yhtä suurempi kuin suurin indeksi. Taulukon `numbers` koko saadaan tarvittaessa lausekkeesta `numbers.length`.
 
 ## Taulukon läpikäynti
 
-Taulukko voidaan läpikäydä helposti toistorakenteessa.
-Seuraava ohjelma arpoo kymmenen nopanheiton tulosta.
-Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksessä
- ja sen jälkeen käänteisessä järjestyksessä.
+Taulukko voidaan läpikäydä helposti toistorakenteessa. Seuraava ohjelma arpoo kymmenen nopanheiton tulosta. Tulokset esitetään ensin heittojen yhteydessä alkuperäisessä järjestyksessä ja sen jälkeen käänteisessä järjestyksessä.
 
 ```javascript
-        const HEITOT = 5;
-        let tulos;
-        let heitot = [];
+const numberOfThrows = 5;
+let result;
+let throwResults = [];
 
-        for (let i = 0; i<HEITOT; i++) {
-            tulos = Math.floor(Math.random()*6)+1;
-            console.log('Heiton ' + (i+1) + ' tulos: ' + tulos);
-            heitot[i] = tulos;
-        }
-        console.log('Takaperin:')
-        for (let i = HEITOT-1; i>=0; i--) {
-            console.log('Heiton ' + (i+1) + ' tulos: ' + heitot[i]);
-        }
+for (let i = 0; i<numberOfThrows; i++) {
+  result = Math.floor(Math.random()*6)+1;
+  console.log('Heiton ' + (i+1) + ' tulos: ' + result);
+  throwResults[i] = result;
+}
+console.log('Takaperin:')
+for (let i = numberOfThrows-1; i>=0; i--) {
+    console.log('Heiton ' + (i+1) + ' tulos: ' + throwResults[i]);
+}
 ```
 
 Esimerkki tulosteesta:
-```
+
+```txt
 Heiton 1 tulos: 6
 Heiton 2 tulos: 3
 Heiton 3 tulos: 4
@@ -91,36 +86,32 @@ Heiton 1 tulos: 6
 
 ## Harva taulukko
 
-Sellaista taulukkoa, jossa vain osaa alkioista käytetään, kutsutaan harvaksi taulukoksi.
-Ideana on käyttää taulukkoa sen kirjaamiseen, onko jokin arvo jo käytetty.
+Sellaista taulukkoa, jossa vain osaa alkioista käytetään, kutsutaan harvaksi taulukoksi. Ideana on käyttää taulukkoa sen kirjaamiseen, onko jokin arvo jo käytetty.
 
-Tarkastellaan esimerkkinä lottorivin arpovaa ohjelmaa. Ohjelma kysyy numeroiden kokonaismäärän
-ja arvottavien numeroiden määrän.
-Aluksi kaikki numerot alustetaan käyttämättömiksi.
-Kun jokin numero on arvottu, vastaava alkio merkitään taulukosta käytetyksi.
-Kunkin lottoriviin tulevan numeron arvonta toistetaan niin monta kertaa, kunnes saadaan käyttämätön numero.
-Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.
+Tarkastellaan esimerkkinä lottorivin arpovaa ohjelmaa. Ohjelma kysyy numeroiden kokonaismäärän ja arvottavien numeroiden määrän. Aluksi kaikki numerot alustetaan käyttämättömiksi. Kun jokin numero on arvottu, vastaava alkio merkitään taulukosta käytetyksi. Kunkin lottoriviin tulevan numeron arvonta toistetaan niin monta kertaa, kunnes saadaan käyttämätön numero. Näin samaa numeroa ei tule valittua lottoriviin kahteen kertaan.
 
 Alla on arvonnan toteuttava ohjelmakoodi:
+
 ```javascript
-       let kaytetty = [];
-       let numerot, arvottavat;
-       let r;
+let kaytetty = [];
+let numerot, arvottavat;
+let r;
 
-       numerot = prompt('Monestako numerosta valitaan? ');
-       arvottavat = prompt('Montako numeroa arvotaan?');
+numerot = prompt('Monestako numerosta valitaan? ');
+arvottavat = prompt('Montako numeroa arvotaan?');
 
-       for (let i = 0; i<arvottavat; i++) {
-           do {
-               r = Math.floor(Math.random()*numerot)+1;
-           } while (kaytetty[r]);
-           kaytetty[r] = true;
-           console.log(r);
-       }
+for (let i = 0; i<arvottavat; i++) {
+  do {
+    r = Math.floor(Math.random()*numerot)+1;
+  } while (kaytetty[r]);
+  kaytetty[r] = true;
+  console.log(r);
+}
 ```
 
 Esimerkki tulosteesta, kun valitaan seitsemän numeroa 40:stä:
-```
+
+```txt
 11
 23
 24
@@ -132,8 +123,7 @@ Esimerkki tulosteesta, kun valitaan seitsemän numeroa 40:stä:
 
 ## Taulukkometodeja
 
-JavaScript-taulukolle voidaan soveltaa valmiiksi ohjelmoituja metodeja, joilla taulukkoa muokataan.
-Näitä metodeja ovat esimerkiksi:
+JavaScript-taulukolle voidaan soveltaa valmiiksi ohjelmoituja metodeja, joilla taulukkoa muokataan. Näitä metodeja ovat esimerkiksi:
 
 - `sort()`	lajittelee taulukon aakkosjärjestykseen
 - `reverse()`	vaihtaa taulukon alkiot käänteiseen 	järjestykseen
@@ -142,13 +132,14 @@ Näitä metodeja ovat esimerkiksi:
 - `push(alkioluettelo)`	lisää taulukon loppuun luetellut, pilkuilla 	erotellut alkiot
 - `includes(arvo)`      tarkastaa sisältääkö taulukko annetun arvon
 
-Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi.
-Esimerkiksi taulukko nimeltä `luvut` lajitellaan kirjoittamalla `luvut.sort()`.
+Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi. Esimerkiksi taulukko nimeltä `numbers` lajitellaan kirjoittamalla `numbers.sort()`.
 
-Huomaa, että edellä mainittu `sort()`-metodi lajittelee taulukon aakkosjärjestykseen eikä numeeriseen järjestykseen. Tällöin esimerkiksi arvot 100, 23 ja 15 lajiteltaisiin aakkosjärjestykseen 100, 15, 23, mikä ei yleensä ole ohjelmoijan haluama järjestys. Tämän voi korjata kirjoittamalla halutun lajittelufunktion `sort()`-metodikutsun yhteydessä. Esimerkiksi taulukko `luvut` lajiteltaisiin numeeriseen järjestykseen seuraavasti:
+Huomaa, että edellä mainittu `sort()`-metodi lajittelee taulukon aakkosjärjestykseen eikä numeeriseen järjestykseen. Tällöin esimerkiksi arvot 100, 23 ja 15 lajiteltaisiin aakkosjärjestykseen 100, 15, 23, mikä ei yleensä ole ohjelmoijan haluama järjestys. Tämän voi korjata kirjoittamalla halutun lajittelufunktion `sort()`-metodikutsun yhteydessä. Esimerkiksi taulukko `numbers` lajiteltaisiin numeeriseen järjestykseen seuraavasti:
+
+```js
+numbers.sort((a,b) => a-b);
 ```
-luvut.sort((a,b) => a-b);
-```
+
 Edellä käytettiin ns. nuolifunktionotaatiota lajittelufunktion kirjoittamiseen; nuolifunktioihin palataan myöhemmin.
 
 ## Harjoitustehtävät
@@ -178,5 +169,3 @@ Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon (`<ul>`) käänteises
     - Ohjelma kysyy äänestäjien lukumäärän.
     - Ohjelma kysyy vuoron perään kultakin äänestäjältä, ketä tämä äänestää. Jos äänestäjä syöttää äänestysnumeron sijasta nollan, tulkitaan se tyhjäksi ääneksi.
     - Ohjelma ilmoittaa vaalien voittajan (eli hänen äänestysnumeronsa).
-
- 

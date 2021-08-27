@@ -16,7 +16,7 @@ Saatavilla ilmaiseksi: [Visual Studio Code](https://code.visualstudio.com/)
 - hyvä [dokumentaatio ja ohjeistus](https://code.visualstudio.com/docs/editor/codebasics)
 - monen JS-kehittäjän valinta
 
-### VSCode - Peruskäyttä
+### VSCode - Peruskäyttö
 
 Aktiivinen **projekti** on käytännössä sivupaneelissa auki oleva kansio (_File -> Open folder..._).
 
@@ -33,6 +33,12 @@ Näppäriä näppäinoikoteitä (for finnish keyboard layout, check _File -> Pre
 - Split editor: _ctrl-§_
 
 [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
+
+## Tyypillisiä JS-koodauskäytäntöjä
+
+- sisennys välilyönneillä (2 x space), ei tabilla (voit asettaaa oletukseksi koodieditorissa)
+- muuttujat nimetään camelCasella
+- ei ääkkösiä tai muita erikoismerkkejä tiedostonimiin
 
 ## Web-selain koodin ajamiseen ja testaamiseen
 
