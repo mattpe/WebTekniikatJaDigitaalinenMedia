@@ -35,14 +35,14 @@ Lisätään taulukkoon sen jälkeen kolme alkiota:
 numbers[0] = 17;
 numbers[1] = 2;
 numbers[2] = 8;
-```        
+```
 
 Vaihtoehtoisesti taulukko voitaisiin luoda kirjoittamalla sen
 sisältö suoraan lauseeseen, jossa taulukkomuuttuja määritellään:
 
 ```javascript
 numbers = [17,2,8];
-```    
+```
 
 Huomaa, että taulukon kokoa ei tarvitse tietää taulukkoa luotaessa. Taulukkoon voidaan sen luonnin jälkeen lisätä haluttu määrä alkioita.
 
@@ -125,12 +125,12 @@ Esimerkki tulosteesta, kun valitaan seitsemän numeroa 40:stä:
 
 JavaScript-taulukolle voidaan soveltaa valmiiksi ohjelmoituja metodeja, joilla taulukkoa muokataan. Näitä metodeja ovat esimerkiksi:
 
-- `sort()`	lajittelee taulukon aakkosjärjestykseen
-- `reverse()`	vaihtaa taulukon alkiot käänteiseen 	järjestykseen
-- `shift()`	poistaa ja palauttaa taulukon 1. alkion
-- `pop()`	poistaa ja palauttaa taulukon viimeisen 	alkion
-- `push(alkioluettelo)`	lisää taulukon loppuun luetellut, pilkuilla 	erotellut alkiot
-- `includes(arvo)`      tarkastaa sisältääkö taulukko annetun arvon
+- `sort()` lajittelee taulukon aakkosjärjestykseen
+- `reverse()` vaihtaa taulukon alkiot käänteiseen järjestykseen
+- `shift()` poistaa ja palauttaa taulukon 1. alkion
+- `pop()` poistaa ja palauttaa taulukon viimeisen alkion
+- `push(alkioluettelo)` lisää taulukon loppuun luetellut, pilkuilla erotellut alkiot
+- `includes(arvo)` tarkastaa sisältääkö taulukko annetun arvon
 
 Metodeja kutsutaan siten, että ensin kirjoitetaan taulukkomuuttujan nimi, sen jälkeen piste ja lopuksi metodin nimi. Esimerkiksi taulukko nimeltä `numbers` lajitellaan kirjoittamalla `numbers.sort()`.
 
@@ -159,11 +159,11 @@ Ohjelma tulostaa koirien nimet numeroimattomaan luetteloon (`<ul>`) käänteises
 5. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes hän antaa uudelleen jonkin aiemmin antamansa luvun. Tuolloin ohjelma ilmoittaa, että luku on jo annettu ja lopettaa toimintansa. (3p)
 
 6. Kirjoita ohjelma, joka kysyy käyttäjältä lukuja, kunnes käyttäjä antaa nollan. Tämän jälkeen ohjelma tulostaa annettujen lukujen mediaanin. (3p)
-   
+
      - Mediaani on se luku, joka on suuruusjärjestyksessä keskimmäisin.
      - Jos lukuja on parillinen määrä, on mediaani kahden suuruusjärjestyksessä keskimmäisen luvun keskiarvo.
      - Huomaa, että nolla on vain lopetusmerkki. Sitä ei saa käsitellä mukana olevana lukuna mediaania laskettaessa.
-     
+
 7. Kirjoita alla olevan kuvauksen mukainen äänestysohjelma pienimuotoiseen kokouskäyttöön. (3p)
     - Ohjelma kysyy ehdokkaiden lukumäärän. Jos ehdokkaita on esimerkiksi 5, saavat he äänestysnumerot 1, 2, ..., 5. (Tämän jälkeen ehdokkaat voisivat sopia keskenään ja ilmoittaa äänestäjille, mikä on kunkin ehdokkaan äänestysnumero.)
     - Ohjelma kysyy äänestäjien lukumäärän.
