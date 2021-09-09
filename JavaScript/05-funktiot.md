@@ -300,7 +300,7 @@ Kirjoita myös pääohjelma. joka kysyy käyttäjältä kolme lukua, kutsuu kirj
 
    - Huomaa, että kaksi lukua tai jopa kaikki luvut saattavat olla yhtäsuuria. Tällöinkin ohjelman on toimittava oikein.
 
-5. Kirjoita funktio `liitä()`, joka saa parametrinaan merkkijonoja sisältävän taulukon. Funktio palauttaa merkkijonon, joka on muodostettu liittämällä taulukon alkiot toisiinsa. (2p)
+5. Kirjoita funktio `liita()`, joka saa parametrinaan merkkijonoja sisältävän taulukon. Funktio palauttaa merkkijonon, joka on muodostettu liittämällä taulukon alkiot toisiinsa. (2p)
 
    - Esimerkki: Kolmialkioisessa taulukossa on alkiot Viivi, Saara ja Yrjö-Pekka. Funktio palauttaa merkkijonon ViiviSaaraYrjö-Pekka.
 
