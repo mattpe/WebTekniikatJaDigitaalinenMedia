@@ -73,8 +73,7 @@ nappi.onclick = popup;
 
 ### moderni (2010-luku)
 
-[addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)-metodia suositellaan käytettäväksi vähänkin laajemmissa sovelluksissa. Sen avulla voidaan samaan tapahtumaan liittää useampi tapahtumankäsittelijä tai tapahtuman kuuntelu voidaan perua sovelluksen eri vaiheissa tarpeen mukaan [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)-metodin avulla.
-Tälläistä toimintoa voidaan tarvita esim. silloin, kun halutaan, että painikkeen ensimmäinen napsautus tekee toiminnon A ja toinen napsautus tekee toiminnon B:
+[addEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)-metodia suositellaan käytettäväksi vähänkin laajemmissa sovelluksissa. Sen avulla voidaan samaan tapahtumaan liittää useampi tapahtumankäsittelijä tai tapahtuman kuuntelu voidaan perua sovelluksen eri vaiheissa tarpeen mukaan [removeEventListener](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)-metodin avulla. Tälläistä toimintoa voidaan tarvita esim. silloin, kun halutaan, että painikkeen ensimmäinen napsautus tekee toiminnon A ja toinen napsautus tekee toiminnon B:
 
 ```html
 <button>Klikkaa mua</button>
@@ -137,8 +136,7 @@ form.addEventListener('submit', function(evt) {
 
 ## [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
-JavaScriptin uudemmissa versioissa callback funktioiden sijasta käytetään yhä useammin lupauksia (promise). Lupaus on olio, joka 'lupaa' palauttaa arvon.
-Lupauksen etuja ovat mm. yksinkertaisempi syntaksi ja virheenkäsittelyn helpottaminen. Esim. lomakkeen lähettäminen fetch-metodilla:
+Verkko-operaatioiden ja muiden mahdollisesti aikaa vievien taustaoperaatioiden kanssa JavaScriptissä käytetään callback-funktioiden lisäksi lupauksia (promise). Lupaus on olio, joka 'lupaa' palauttaa arvon. Onnistuneelle ja epäonnistuneelle tulokselle asetetaan omat erilliset callback-funktiot. Lupauksen etuja ovat mm. yksinkertaisempi syntaksi ja virheenkäsittelyn helpottaminen. Esim. lomakkeen lähettäminen fetch-metodilla:
 
 ```html
 <form>
