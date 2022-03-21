@@ -35,6 +35,6 @@ Lisätietoja kotisivuista [tietohallinnon ohjeesta](https://wiki.metropolia.fi/d
     1. Kirjoita myös kokonaan tehtyjen tehtävien pistemäärä ja niiden yhteispisteet
       -Pistemäärät löytyvät tehtävien ohjeista
 1. Jos haluat opettajalta palautetta tai apua, palauta **klikattava linkki**, joka johtaa users.metropolia.fi:llä oleviin tiedostoihisi ja pyydä opettaja paikalle.
-1. Jos olet sairaana tms. toimi kohdan A mukaan.
+1. Jos olet sairaana tms. toimi kohdan **1** mukaan.
 
 **_HUOM!_ Jos vastauksessasi oleva linkki ei ole klikattava, tehtävää ei arvioida.**
