@@ -59,7 +59,7 @@ Esimerkiksi seuraava ohjelma ilmoittaa, jos käyttäjän antama kokonaisluku on 
 ```javascript
   let number;
   number = prompt('Anna kokonaisluku');
-  if (number%2==1 && number>10) {
+  if (number%2==0 && number>10) {
       console.log('Annoit parillisen luvun, joka on suurempi kuin 10');
   }
 ```
