@@ -208,9 +208,9 @@ Lataa aloitustiedostot [tästä reposta](https://github.com/ilkkamtk/event-tehta
    }
    ```
    
-   **Huom.** pics-taulukossa viitattu lorempixel API ei toimi enää, voit korvata sen esim. placekittenillä:
+**Huom.** pics-taulukossa viitattu lorempixel API ei toimi enää, voit korvata sen esim. placekittenillä:
    
-   ```js
+```js
    const pics = [
   {
     thumb: 'https://www.fillmurray.com/100/100',
